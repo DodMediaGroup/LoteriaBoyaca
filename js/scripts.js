@@ -1,5 +1,6 @@
 var api = "http://loteriadeboyaca.gov.co/api/";
 //var api = "http://192.168.140.103/dodmediagroup/Loteria/LoteriaBoyaca/Web/api/";
+//var api = "http://localhost:8080/dodmediagroup/projects/loteria/project/api/";
 
 var requestLoadAjax = new Array();
 requestLoadAjax['home'] = false;
