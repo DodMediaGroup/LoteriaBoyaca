@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Loteria de Boyacá</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/jquery.mobile.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div data-role="page" id="home">
+		<div role="main" class="ui-content">
+			<div class="my-logo"></div>
+			<div class="my-dollar"></div>
+			<div class="my-award">
+				<strong id="value-award-higher"></strong>
+				<p>Millones al mayor</p>
+			</div>
+			<div class="next-raffle">
+				<strong>PRÓXIMO SORTEO</strong>
+				<p id="next-raffle"></p>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+                <ul>
+                    <li>
+                    	<a href="#" data-transition="slide" class="ui-nodisc-icon mi-btn-active">
+                    		INICIO
+                    		<i class="my-icon icon-home"></i>
+                		</a>
+                    </li>
+                    <li>
+                    	<a href="#news" data-transition="slide" class="ui-nodisc-icon">
+                    		NOTICIAS
+                    		<i class="my-icon icon-news"></i>
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="#results" data-transition="slide" class="ui-nodisc-icon">
+                    		RESULTADOS
+                    		<i class="my-icon icon-results"></i>
+                    	</a>
+                    </li>
+                </ul>
+            </div><!-- /navbar -->
+		</div>
+	</div>
+
+	<div data-role="page" id="news">
+        <div data-role="header" data-position="fixed">
+            <h1>NOTICIAS</h1>
+        </div>
+		<div role="main" class="ui-content">
+			<section class="js-load-content">
+                
+            </section>
+            <div class="my-load-content"></div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+                <ul>
+                    <li>
+                    	<a href="#home" data-transition="slide" class="ui-nodisc-icon">
+                    		INICIO
+                    		<i class="my-icon icon-home"></i>
+                		</a>
+                    </li>
+                    <li>
+                    	<a href="#" data-transition="slide" class="ui-nodisc-icon mi-btn-active">
+                    		NOTICIAS
+                    		<i class="my-icon icon-news"></i>
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="#results" data-transition="slide" class="ui-nodisc-icon">
+                    		RESULTADOS
+                    		<i class="my-icon icon-results"></i>
+                    	</a>
+                    </li>
+                </ul>
+            </div><!-- /navbar -->
+		</div>
+	</div>
+
+    <div data-role="page" id="new">
+        <div data-role="header" data-position="fixed">
+            <h1>NOTICIAS</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <article class="my-item">
+                <span class="my-item-date js-item-date"></span>
+                <h1 class="my-item-title js-item-title"></h1>
+                <div class="my-item-image js-item-image"></div>
+                <div class="my-item-new js-item-new">
+
+                </div>
+                <div class="social-share">
+                    <div class="my-content">
+                        <p class="my-share-text">Compartir</p>
+                        <p><a href="https://www.facebook.com" class="network share-facebook" target="_blank"></a></p>
+                        <p><a href="https://www.twiter.com" class="network share-twitter" target="_blank"></a></p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" data-transition="slide" class="ui-nodisc-icon">
+                            INICIO
+                            <i class="my-icon icon-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#news" data-transition="slide" class="ui-nodisc-icon mi-btn-active">
+                            NOTICIAS
+                            <i class="my-icon icon-news"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#results" data-transition="slide" class="ui-nodisc-icon">
+                            RESULTADOS
+                            <i class="my-icon icon-results"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+
+	<div data-role="page" id="results">
+        <div data-role="header" data-position="fixed">
+            <h1>RESULTADOS</h1>
+        </div>
+		<div role="main" class="ui-content">
+			<div class="my-item">
+                <div class="my-item-content">
+                    <h1 class="my-item-title">ÚLTIMO SORTEO</h1>
+                    <p class="my-item-info js-my-last-date">SABADO 25 DE OCTUBRE</p>
+                </div>
+                <div class="my-go my-go-green">
+                    <a href="#result" class="js-link-raffle" data-raffle=""></a>
+                </div>
+            </div>
+            <div class="my-item">
+                <div class="my-item-content">
+                    <h1 class="my-item-title">SORTEOS ANTERIORES</h1>
+                    <div class="my-item-info">
+                        <select name="sorteos" id="result_raffle" class="ui-nodisc-icon ui-alt-icon js-result_raffle" data-icon="calendar">
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="my-go">
+                    <a href="#" class="js-link-raffle check" data-raffle=""></a>
+                </div>
+            </div>
+            <div class="my-item">
+                <div class="my-item-content">
+                    <h1 class="my-item-title">¿ERES UN GANADOR?</h1>
+                    <p class="my-item-info">CONSÚLTALO AQUÍ</p>
+                </div>
+                <div class="my-go my-go-green">
+                    <a href="#winner"></a>
+                </div>
+            </div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+                <ul>
+                    <li>
+                    	<a href="#home" data-transition="slide" class="ui-nodisc-icon">
+                    		INICIO
+                    		<i class="my-icon icon-home"></i>
+                		</a>
+                    </li>
+                    <li>
+                    	<a href="#news" data-transition="slide" class="ui-nodisc-icon">
+                    		NOTICIAS
+                    		<i class="my-icon icon-news"></i>
+                    	</a>
+                    </li>
+                    <li>
+                    	<a href="#" data-transition="slide" class="ui-nodisc-icon mi-btn-active">
+                    		RESULTADOS
+                    		<i class="my-icon icon-results"></i>
+                    	</a>
+                    </li>
+                </ul>
+            </div><!-- /navbar -->
+		</div>
+	</div>
+
+    <div data-role="page" id="result">
+        <div data-role="header" data-position="fixed">
+            <h1>RESULTADOS</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="my-content-one">
+                <h2 class="js-result-raffle">SORTEO 4029</h2>
+                <p class="js-result-date">SÁBADO 25 DE OCTUBRE DE 2014</p>
+            </div>
+            <div class="my-content-two">
+                <h3 class="js-result-higher">Premio Mayor $3.000 Millones</h3>
+                <div class="my-result-number">
+                    <span class="my-result-ball js-ball-1">5</span>
+                    <span class="my-result-ball js-ball-2">8</span>
+                    <span class="my-result-ball js-ball-3">2</span>
+                    <span class="my-result-ball js-ball-4">7</span>
+                </div>
+                <p class="js-result-higher-info">Serie 045 <span>Ciudad: Bucaramanga</span></p>
+            </div>
+            <div class="my-content-three js-result-awards">
+                <div>
+                    <h3>1 Premio Extraordinario $200 Millones</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ganador</th>
+                                <th>Serie</th>
+                                <th>Ciudad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2357</td>
+                                <td>105</td>
+                                <td>Tunja</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" data-transition="slide" class="ui-nodisc-icon">
+                            INICIO
+                            <i class="my-icon icon-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#news" data-transition="slide" class="ui-nodisc-icon">
+                            NOTICIAS
+                            <i class="my-icon icon-news"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#results" data-transition="slide" class="ui-nodisc-icon mi-btn-active">
+                            RESULTADOS
+                            <i class="my-icon icon-results"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+
+    <div data-role="page" id="winner">
+        <div data-role="header" data-position="fixed">
+            <h1>RESULTADOS</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <div class="my-content-one">
+                <h2>¿ERES UN GANADOR?</h2>
+                <p>Consúltalo aquí</p>
+            </div>
+            <div class="my-winner-form">
+                <div class="my-winner-raffles">
+                    <select name="sorteos" id="id_raffle_winner" class="ui-nodisc-icon ui-alt-icon js-result_raffle" data-icon="calendar">
+                    
+                    </select>
+                </div>
+                <div class="my-winner-ticket">
+                    <input class="ui-btn-inline js-winner_number" type="number" name="winner_number" placeholder="Numero">
+                    <input class="ui-btn-inline js-winner_serie" type="number" name="winner_serie" placeholder="Serie">
+                </div>
+                <button class="ui-btn js-is-winner">¡SUERTE!</button>
+
+                <div class="my-return-winner">
+                    <div class="js-close"></div>
+                    <div class="my-return-winner-image"></div>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" data-transition="slide" class="ui-nodisc-icon">
+                            INICIO
+                            <i class="my-icon icon-home"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#news" data-transition="slide" class="ui-nodisc-icon">
+                            NOTICIAS
+                            <i class="my-icon icon-news"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#results" data-transition="slide" class="ui-nodisc-icon mi-btn-active">
+                            RESULTADOS
+                            <i class="my-icon icon-results"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </div>
+
+	<div class="my-loading"></div>
+    <div class="my-msj-show"></div>
+
+    <script src="cordova.js"></script>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

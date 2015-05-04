@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.loteriadeboyaca.app"
+        versionCode = "10" 
+        version     = "0.9" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Aplicación Loteria de Boyacá</name>
+
+    <description>
+        Este pendiente de los ultimos sorteos y noticias de la Loteria de Boyacá.
+    </description>
+
+    <author href="http://www.dodmediagroup.co" email="sergioa@dodmediagroup.co">
+        Sergio Luis Alfonso
+    </author>
+
+    <access origin="*"/>
+
+    <preference name="permissions" value="none"/>
+    
+    <gap:platform name="android" />
+
+    <preference name="orientation" value="portrait" />
+
+
+    <icon src="images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="images/icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="images/icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+    <gap:splash src="images/splashscreen/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="images/splashscreen/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="images/splashscreen/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="images/splashscreen/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+</widget>
